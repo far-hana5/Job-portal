@@ -17,7 +17,7 @@ const handleSignOut=()=>{
 }
 const links=<>
  <li><NavLink to='/'>Home</NavLink></li>
- <li><NavLink to='/'>Home</NavLink></li>
+ <li><NavLink to='/'>Jobs </NavLink></li>
  <li><NavLink to='/'>Home</NavLink></li>
 </>
 
