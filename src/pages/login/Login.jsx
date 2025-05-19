@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import signinlottiedata from "../../assets/lottie/lottieSignIn.json"
 import AuthContext from '../../context/authcontext/AuthContext';
 import { useLocation, useNavigate } from 'react-router-dom';
+import SocialLogin from '../common/SocialLogin';
 const Login = () => {
 const {signInUser}=useContext(AuthContext);
 const location=useLocation();
@@ -33,22 +34,30 @@ const from=location.state ||'/';
            
             <Lottie animationData={signinlottiedata}></Lottie>
           </div>
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-          <h1 className="text-5xl font-bold">Login Now!</h1>
-
-           <form onSubmit={handleSignIn} className="card-body">
-          
-              <fieldset className="fieldset">
-                <label className="label">Email</label>
-                <input type="email" name="email" className="input" placeholder="Email" />
-                <label className="label" >Password</label>
-                <input type="password"name="password" className="input" placeholder="Password" />
-                <div><a className="link link-hover">Forgot password?</a></div>
-                <button className="btn btn-neutral mt-4">Login</button>
-              </fieldset>
-          
-           </form>
-          </div>
+           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <h1 className="ml-8 mt-4 text-5xl font-bold">Register now!</h1>
+                    <form onSubmit={handleSignIn} className="card-body">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Password</span>
+                            </label>
+                            <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                            <label className="label">
+                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                            </label>
+                        </div>
+                        <div className="form-control mt-6">
+                            <button className="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                    <SocialLogin></SocialLogin>
+                </div>
         </div>
       </div>
     );
