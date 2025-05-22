@@ -19,3 +19,4 @@ const PrivateRoute = ({children}) => {
     ></Navigate>
 };
 
+export default PrivateRoute;

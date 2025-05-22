@@ -9,7 +9,22 @@ import Register from '../pages/register/Register';
 import Login from '../pages/login/Login';
 import JobDetails from '../pages/jobdetails/JobDetails';
 import PrivateRoute from './PrivateRoute';
+import JobApply from '../pages/jobapply/JobApply';
+import MyApplications from '../pages/MyApplications/MyApplications'
+import AddJob from '../pages/AddJob/AddJob'
+import MyPostedJobs from '../pages/MyPostedJobs/MyPostedJobs'
+import ViewApplications from '../pages/ViewApplications/ViewApplications'
 
+
+
+
+/*
+import JobApply from "../pages/JobApply/JobApply";
+import MyApplications from "../pages/MyApplications/MyApplications";
+import AddJob from "../pages/AddJob/AddJob";
+import MyPostedJobs from "../pages/MyPostedJobs/MyPostedJobs";
+import ViewApplications from "../pages/ViewApplications/ViewApplications";
+*/
   const Router = createBrowserRouter([
     {
       path: "/",
